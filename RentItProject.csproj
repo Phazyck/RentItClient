@@ -53,11 +53,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Service References\RentItReference\RentItProject.RentItReference.NodeOfint.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\RentItReference\RentItService.wsdl" />
-    <None Include="Service References\RentItReference\Service.xsd">
+    <None Include="Service References\RentItReference\RentItTest.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\RentItReference\Service1.xsd">
+    <None Include="Service References\RentItReference\RentItTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RentItReference\RentItTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RentItReference\RentItTest3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

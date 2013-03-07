@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="v72UcIf0dosM8nxbQHpPU1PeIig=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="HIonEJpaP/cKjdKEMbC4+h+iX04=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IRentItService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IRentItService" contract="RentItReference.IRentItService" bindingType="basicHttpBinding" address="http://rentit.itu.dk/RentIt22/Service.svc" bindingConfiguration="BasicHttpBinding_IRentItService">
+    <endpoint name="BasicHttpBinding_IRentItService" contract="RentItReference.IRentItService" bindingType="basicHttpBinding" address="http://rentit.itu.dk/RentIt22/RentItTest.RentItService.svc" bindingConfiguration="BasicHttpBinding_IRentItService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://rentit.itu.dk/RentIt22/Service.svc</serializedValue>
+          <serializedValue>http://rentit.itu.dk/RentIt22/RentItTest.RentItService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

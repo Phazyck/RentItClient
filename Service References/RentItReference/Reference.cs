@@ -9,7 +9,70 @@
 //------------------------------------------------------------------------------
 
 namespace RentItProject.RentItReference {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NodeOfint", Namespace="http://schemas.datacontract.org/2004/07/RentItTest")]
+    [System.SerializableAttribute()]
+    public partial class NodeOfint : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ElementField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private RentItProject.RentItReference.NodeOfint NextField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Element {
+            get {
+                return this.ElementField;
+            }
+            set {
+                if ((this.ElementField.Equals(value) != true)) {
+                    this.ElementField = value;
+                    this.RaisePropertyChanged("Element");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public RentItProject.RentItReference.NodeOfint Next {
+            get {
+                return this.NextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NextField, value) != true)) {
+                    this.NextField = value;
+                    this.RaisePropertyChanged("Next");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RentItReference.IRentItService")]
@@ -56,6 +119,12 @@ namespace RentItProject.RentItReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentItService/Next", ReplyAction="http://tempuri.org/IRentItService/NextResponse")]
         System.Threading.Tasks.Task<int> NextAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentItService/ToNodes", ReplyAction="http://tempuri.org/IRentItService/ToNodesResponse")]
+        RentItProject.RentItReference.NodeOfint ToNodes(int[] array);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentItService/ToNodes", ReplyAction="http://tempuri.org/IRentItService/ToNodesResponse")]
+        System.Threading.Tasks.Task<RentItProject.RentItReference.NodeOfint> ToNodesAsync(int[] array);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -139,6 +208,14 @@ namespace RentItProject.RentItReference {
         
         public System.Threading.Tasks.Task<int> NextAsync() {
             return base.Channel.NextAsync();
+        }
+        
+        public RentItProject.RentItReference.NodeOfint ToNodes(int[] array) {
+            return base.Channel.ToNodes(array);
+        }
+        
+        public System.Threading.Tasks.Task<RentItProject.RentItReference.NodeOfint> ToNodesAsync(int[] array) {
+            return base.Channel.ToNodesAsync(array);
         }
     }
 }

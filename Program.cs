@@ -14,6 +14,21 @@ namespace RentItProject
             using (var client = new RentItServiceClient())
             {
                 // Insert code here! =D
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine(client.Next());
+                }
+                var arr = new int[] {2,3,5,7,11,13};
+                var nodes = client.ToNodes(arr);
+                var n = nodes.Next;
+                while (n != null)
+                {
+                    var e = n.Element;
+                    Console.WriteLine(e);
+                    n = n.Next;
+                }
+                Console.WriteLine("Press [Enter] to exit.");
+                Console.ReadLine();
             }
         }
     }
