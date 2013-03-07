@@ -19,12 +19,10 @@ namespace RentItProject
                     Console.WriteLine(client.Next());
                 }
                 var arr = new int[] {2,3,5,7,11,13};
-                var nodes = client.ToNodes(arr);
-                var n = nodes.Next;
+                var n = client.ToNodes(arr);
                 while (n != null)
                 {
-                    var e = n.Element;
-                    Console.WriteLine(e);
+                    Console.WriteLine(n.Element);
                     n = n.Next;
                 }
                 Console.WriteLine("Press [Enter] to exit.");
